@@ -11,26 +11,15 @@
     <script src="https://www.gstatic.com/firebasejs/5.5.7/firebase.js"></script>
     <script src="cordova.js"></script>
     <script>
-        // Initialize Firebase
 
 
         var config = {
             apiKey: "AIzaSyCiJFnIh2Qgm_TAEZq7eRjxXEK1VHxMkzA",
             authDomain: "shopee-2fc08.firebaseapp.com",
         };
-
+        // Initialize Firebase
         firebase.initializeApp(config);
-        firebase.auth().onAuthStateChanged(function (user) {
-            if (user) {
-                // User is signed in.
-                //Send user to home.html
-                window.location.href = 'home.html';
-            } else {
-                // User is signed out.
-                // Send user to login.html
-                window.location.href = 'login.html';
-            }
-        });
+
     </script>
     <style>
         .toolbaricon {
@@ -44,7 +33,25 @@
 
 
 <body>
+    <ons-page>
+        <div style="text-align: center; margin-top: 30px;">
+            <p style="margin-top: 30px;">
+                <ons-button onclick="logout()">Logout</ons-button>
+            </p>
+        </div>
+    </ons-page>
+    <script>
+        var logout = function () {
+            firebase.auth().signOut().then(function () {
+                // Sign-out successful.
+                ons.notification.alert('See u again soon');
+                window.location.href = 'login.html';
+            }).catch(function (error) {
+                // An error happened.
 
+            });
+        }
+    </script>
 </body>
 
 
