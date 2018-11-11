@@ -17,6 +17,12 @@
     <feature name="InAppBrowser">
         <param name="android-package" value="org.apache.cordova.inappbrowser.InAppBrowser" />
     </feature>
+    <universal-links>
+        <host name="shopee-2fc08" scheme="https" />
+        <host name="shopee-2fc08.firebaseapp.com" scheme="https">
+            <path url="/__/auth/callback" />
+        </host>
+    </universal-links>
     <name>HelloWorld</name>
     <description>
         A sample Apache Cordova application that responds to the deviceready event.
@@ -34,4 +40,5 @@
     <allow-intent href="geo:*" />
     <allow-intent href="market:*" />
     <preference name="loglevel" value="DEBUG" />
+    <preference name="AndroidLaunchMode" value="singleTask" />
 </widget>
