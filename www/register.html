@@ -10,6 +10,9 @@
     <script src="ejs.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.5.7/firebase.js"></script>
     <script src="cordova.js"></script>
+    <!--CSS-->
+    <link rel="stylesheet" type="text/css" href="css/util.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
     <script>
         // Initialize Firebase
 
@@ -36,18 +39,27 @@
     <ons-page>
         <div style="text-align: center; margin-top: 30px;">
             <p>
-                <ons-input id="username" modifier="underbar" placeholder="Username" float></ons-input>
+                <div class="wrap-input100 validate-input m-b-16" data-validate="Please enter email: ex@abc.xyz">
+                    <ons-input id="username" type="text" class="input100" placeholder="Username" float></ons-input>
+                    <span class="focus-input100"></span>
+                </div>
             </p>
             <p>
-                <ons-input id="password" modifier="underbar" type="password" placeholder="Password" float></ons-input>
+                <div class="wrap-input100 validate-input m-b-20" data-validate="Please enter password">
+                    <span class="btn-show-pass">
+                        <i class="fa fa fa-eye"></i>
+                    </span>
+                    <ons-input id="password" class="input100" type="password" placeholder="Password" float></ons-input>
+                    <span class="focus-input100"></span>
+                </div>
             </p>
             <p style="margin-top: 30px;">
-                <ons-button onclick="register()">Sign Up for New</ons-button>
+                <ons-button class="btn-login-with bg1 m-b-10 onclick=" register()">Sign Up for New</ons-button>
             </p>
         </div>
     </ons-page>
     <script>
-        var register = function() {
+        var register = function () {
             var username = document.getElementById('username').value;
             var password = document.getElementById('password').value;
             firebase.auth().createUserWithEmailAndPassword(username, password).catch(function (error) {
@@ -57,15 +69,15 @@
                 ons.notification.alert(errorCode + ':' + errorMessage);
                 // ...
             });
-}
+        }
 
-            firebase.auth().onAuthStateChanged(function (user) {
-                if (user) {
-                    // User is signed in.
-                    //Send user to home.html
-                    window.location.href = 'login.html';
-                }
-            })
+        firebase.auth().onAuthStateChanged(function (user) {
+            if (user) {
+                // User is signed in.
+                //Send user to home.html
+                window.location.href = 'login.html';
+            }
+        })
     </script>
 </body>
 
