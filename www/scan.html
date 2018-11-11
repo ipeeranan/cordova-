@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
+    <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
+    <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous"></script>
+    <script src="ejs.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.7/firebase.js"></script>
+    <script src="cordova.js"></script>
+    <!--CSS-->
+    <link rel="stylesheet" type="text/css" href="css/util.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script>
+        // Initialize Firebase
+
+
+        var config = {
+            apiKey: "AIzaSyCiJFnIh2Qgm_TAEZq7eRjxXEK1VHxMkzA",
+            authDomain: "shopee-2fc08.firebaseapp.com",
+        };
+
+        firebase.initializeApp(config);
+    </script>
+    <style>
+        .toolbaricon {
+            padding-left: 5px;
+            padding-bottom: 5px;
+            padding-right: 5px;
+            color: orange;
+        }
+    </style>
+</head>
+<body>
+
+ 
+        <div id="box">
+                <div id="overlay">
+                        
+
+                </div>
+                
+              </div>
+         
+    <script>
+
+        document.addEventListener("deviceready", onDeviceReady, false);
+
+        function onDeviceReady() {
+            // Now safe to use device APIs
+
+            QRScanner.scan(displayContents);
+
+            function displayContents(err, text) {
+                if (err) {
+
+                } else {
+
+                    localStorage.setItem("code", text);
+                    QRScanner.hide();
+
+                    window.location.href = 'home.html';
+
+                }
+            }
+
+            QRScanner.show();
+        }
+    
+ //   document.getElementById('overlay').innerHTML = camera();
+
+    </script>
+</body>
+</html>
