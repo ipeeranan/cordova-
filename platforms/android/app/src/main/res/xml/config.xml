@@ -17,6 +17,9 @@
     <feature name="InAppBrowser">
         <param name="android-package" value="org.apache.cordova.inappbrowser.InAppBrowser" />
     </feature>
+    <feature name="QRScanner">
+        <param name="android-package" value="com.bitpay.cordova.qrscanner.QRScanner" />
+    </feature>
     <universal-links>
         <host name="shopee-2fc08" scheme="https" />
         <host name="shopee-2fc08.firebaseapp.com" scheme="https">

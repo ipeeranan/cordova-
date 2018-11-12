@@ -31,66 +31,25 @@
 
 
 <body>
-        <ons-page>
-                <div class="container">
-            <div class="row">
-            
-              <div class="col">
-                
-               
-                <div style="text-align: center; margin-top: 30px;">
-                  
-                <h3>Sign in to WOW Shopping</h3>
-                <div class="form-group">
-                    <input type="email" class="form-control" id="username" aria-describedby="emailHelp" placeholder="Enter email">
-                    
-                  </div>
-                  <div class="form-group">
-            
-                    <input type="password" class="form-control" id="password" placeholder="Password">
-                  </div>
-            
-            
-             
-               
-        
-        
-                 
-                  <p style="margin-top: 30px;">
-                    <ons-button onclick="login()" modifier="large" class="btn_signin">Sign in</ons-button>
-                  </p>
-                  <p style="margin-top: 30px;">
-                      <a href="register.html">Sing up for New User</a>
-              
-                    </p>
-                   
-                    <br><br><br><br><br>
-                    <div class="container">
-                      <div class="row">
-                      <div class="col-5 left"><div style="border: 1px solid rgb(8, 6, 6);"></div></div>
-                      <div class="col-2 center"><h5>Quick log in with</h5></div>
-                      <div class="col-5 right"><div style="border: 1px solid rgb(8, 6, 6);"></div></div>
-                      </div>
-                    
-                </div>
-               
-                   
-            
-                    
-                  <p style="margin-top: 30px;">
-            
-                    <ons-button onclick="google()" modifier="large" class="btn_google"><ons-icon icon="fa-google">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</ons-icon>Connect with Goole</ons-button>
-                  </p>
-                  <p style="margin-top: 30px;">
-                    <ons-button onclick="facebook()" modifier="large"><ons-icon icon="fa-facebook">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</ons-icon>Connect with Facebook </ons-button>
-                  </p>
-                
-                </div>
-              </div>
-            </div>
-                </div>
-                
-              </ons-page>
+    <ons-page>
+        <div style="text-align: center; margin-top: 30px;">
+            <p>
+                <ons-input id="username" modifier="underbar" placeholder="Username" float></ons-input>
+            </p>
+            <p>
+                <ons-input id="password" modifier="underbar" type="password" placeholder="Password" float></ons-input>
+            </p>
+            <p style="margin-top: 30px;">
+                <ons-button onclick="login()">Sign in</ons-button>
+            </p>
+            <p style="margin-top: 30px;">
+                <ons-button onclick="google()">Sign in With Google</ons-button>
+            </p>
+            <p style="margin-top: 30px;">
+                <a href="register.html">Sign up for a new user</a>
+            </p>
+        </div>
+    </ons-page>
 
     <script>
         //login with google
