@@ -38,22 +38,13 @@
     <ons-page>
         <div style="text-align: center; margin-top: 30px;">
             <p>
-                <div class="wrap-input100 validate-input m-b-16" data-validate="Please enter email: ex@abc.xyz">
-                    <ons-input id="username" type="text" class="input100" placeholder="Username" float></ons-input>
-                    <span class="focus-input100"></span>
-                </div>
+                <ons-input id="username" modifier="underbar" placeholder="Username" float></ons-input>
             </p>
             <p>
-                <div class="wrap-input100 validate-input m-b-20" data-validate="Please enter password">
-                    <span class="btn-show-pass">
-                        <i class="fa fa fa-eye"></i>
-                    </span>
-                    <ons-input id="password" class="input100" type="password" placeholder="Password" float></ons-input>
-                    <span class="focus-input100"></span>
-                </div>
+                <ons-input id="password" modifier="underbar" type="password" placeholder="Password" float></ons-input>
             </p>
             <p style="margin-top: 30px;">
-                <ons-button class="btn-login-with bg1 m-b-10 onclick=" register()">Sign Up for New</ons-button>
+                <ons-button modifier="large" onclick="register()">Sign Up for New</ons-button>
             </p>
         </div>
     </ons-page>
